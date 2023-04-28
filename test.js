@@ -21,14 +21,20 @@ function mintNFT (_Name, _Color, _Height) {
 
     }
     NFTs.push(NFT)
-    console.log("The name is"+ " "+ _Name);
+    console.log("The participant is"+ " "+ _Name);
 }
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs () {
     for(let i = 0; i < NFTs.length; i++) {
-        console.log(NFTs[i]);
+        console.log("Place:" + (i + 1))
+        console.log("Name:" + NFTs[i].Name);
+        console.log("Color:" + NFTs[i].Color);
+        console.log("Height:" + NFTs[i].Height);
+        console.log(" ")
+
+
     }
 }
 
@@ -39,5 +45,6 @@ function getTotalSupply() {
 
 // call your functions below this line
 mintNFT("Angela", "Blue", "5\'5ft");
+mintNFT("Maria", "Black", "5'3ft");
 listNFTs();
 getTotalSupply();
